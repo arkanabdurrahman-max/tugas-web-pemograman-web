@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi - Arkan Abdurrahman</title>
+   
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .page-linker {
+            display: none;
+        }
+
+        .page-content {
+            display: none;
+            max-width: 1000px;
+            margin: 32px auto;
+            padding: 32px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            min-height: 400px;
+        }
+
+        #tab-beranda:checked ~ #konten-beranda,
+        #tab-tentang:checked ~ #konten-tentang,
+        #tab-kontak:checked ~ #konten-kontak {
+            display: block;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            gap: 16px;
+        }
+
+        nav label {
+            color: #a0aab2;
+            padding: 10px 24px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav label:hover {
+            color: #fff;
+        }
+
+        #tab-beranda:checked ~ nav label[for="tab-beranda"],
+        #tab-tentang:checked ~ nav label[for="tab-tentang"],
+        #tab-kontak:checked ~ nav label[for="tab-kontak"] {
+            color: #1abc9c;
+            border-bottom: 3px solid #1abc9c;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 48px 16px;
+            background: linear-gradient(135deg, #eceff1, #ffffff);
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3eb0c4;
+            margin-bottom: 16px;
+        }
+
+        .skills-list {
+            margin-left: 20px;
+            margin-top: 16px;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+        }
+
+        .bio-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .bio-table th, .bio-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .bio-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .bio-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-submit {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-submit:hover {
+            background-color: #16a085;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background-color: #2c3e50;
+            color: #fff;
+            margin-top: 48px;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <input type="radio" name="pages" id="tab-beranda" class="page-linker" checked>
+    <input type="radio" name="pages" id="tab-tentang" class="page-linker">
+    <input type="radio" name="pages" id="tab-kontak" class="page-linker">
+
+ 
+    <nav>
+        <label for="tab-beranda">Beranda</label>
+        <label for="tab-tentang">Biodata Saya</label>
+        <label for="tab-kontak">Kontak</label>
+    </nav>
+
+   
+    <main id="konten-beranda" class="page-content">
+        <section class="hero">
+            <img src="assets/img/profile.jpg.jpeg" alt="Foto Profil" class="profile-img">
+            <h1>Halo, Saya Arkan Abdurrahman</h1>
+            <p style="font-size: 19px; color: #7f8c8d; font-style: italic;">Seorang mahasiswa Teknik Informatika</p>
+        </section>
+
+        <section>
+            <h2>Selamat Datang di Portofolio Saya</h2>
+            <p>Saya adalah seorang mahasiswa Teknik Inforf matika dari Universitas Paramadina yang sedang belajar dalam pembuatan portofolio pemrograman web melalui coding.</p>
+        </section>
+    </main>
+
+    
+    <main id="konten-tentang" class="page-content">
+        <section>
+            <h2>Tentang Saya</h2>
+            <p>Saya ingin belajar lebih banyak tentang pengembangan web dan teknologi terbaru karena saya ingin membantu orang orang ketika sedang menghadapi tantangan dalam pengembangan aplikasi dan website.</p>
+        </section>
+
+        
+        <section style="margin-top: 32px;">
+            <h3>Riwayat Pendidikan</h3>
+            <table class="bio-table">
+                <thead>
+                    <tr>
+                        <th>Tingkat</th>
+                        <th>Institusi</th>
+                        <th>Tahun</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SMPi</td>
+                        <td>Pondok Pesantren boarding school</td>
+                        <td>2018 - 2021</td>
+                    </tr>
+                    <tr>
+                        <td>SMA</td>
+                        <td>Pondok Pesantren LTIQ As-syifa subang</td>
+                        <td>2021 - 2024</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>Mahasiswa</td>
+                        <td>Universitas Paramadina</td>
+                        <td>2025 - Sekarang</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section style="margin-top: 32px;">
+            <h3>Kemampuan</h3>
+            <ul class="skills-list">
+                <li>Pembelajaran dasar Python</li>
+                <li>Pembelajaran dasar PHP & MySQL</li>
+                <li>pembelajaran dasar c++</li>
+            </ul>
+        </section>
+
+
+        <section style="margin-top: 32px;">
+            <h3>Minat</h3>
+            <ol style="margin-left: 20px;">
+                <li>Pembuataa Website</li>
+                <li>perbaikan Software</li>
+            </ol>
+        </section>
+ </main>
+
+    <main id="konten-kontak" class="page-content">
+        <section>
+            <h2>Hubungi Saya</h2>
+            <p>Jika Anda ingin berdiskusi atau mengirimkan pesan, silakan isi formulir di bawah ini:</p>
+            <form action="#" method="post" style="margin-top: 24px;">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subjek">Subjek:</label>
+                    <input type="text" id="subjek" name="subjek" placeholder="Subjek pesan">
+                </div>
+
+                <div class="form-group">
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="5" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Arkan Abdurrahman.</p>
+    </footer>
+
+</body>
+</html>
