@@ -1,11 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas Pemrograman Web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tooplate-ivory-style.css">
+
 </head>
 <body>
-    
+
+<div class="est-label" aria-hidden="true">Est. 2026</div>
+
+<!-- FLOATING PILL NAV (desktop) -->
+<nav class="pill-nav" aria-label="Main Navigation">
+  <a href="#hero">Home</a>
+  <a href="#lookbook">Lookbook</a>
+  <a href="#product">Shop</a>
+  <a href="#process">Process</a>
+  <a href="#video">Story</a>
+  <a href="#signature">Contact</a>
+</nav>
+
+<!-- MOBILE NAV (CSS-only, memakai :target) -->
+<a href="#menu" class="hamburger" aria-label="Open Navigation"><span></span><span></span><span></span></a>
+<nav class="mobile-nav" id="menu" aria-label="Mobile Navigation">
+  <a href="#hero" class="hamburger open menu-close" aria-label="Close Navigation"><span></span><span></span><span></span></a>
+  <a href="#hero">Home</a>
+  <a href="#lookbook">Lookbook</a>
+  <a href="#product">Shop</a>
+  <a href="#process">Process</a>
+  <a href="#video">Story</a>
+  <a href="#signature">Contact</a>
+</nav>
+
+<main>
+
+  <!-- SECTION 1: HERO -->
+  <section class="canvas-section hero" id="hero">
+    <div class="hero-image">
+      <img src="paramadina.jpeg" loading="eager">
+      <div class="hero-image-tag">Spring / Summer 2026</div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Pameran Rancangan Aplikasi Website &amp; Iot</div>
+      <h1 class="hero-title">IT<br><em>Fest</em><br>EXPO</h1>
+      <p class="hero-desc">Kami membuat proyek acara IT fest yang mengenai Expo untuk menampilkan inovasi terbaru dalam dunia teknologi dan memperkenalkan invatif yang dibuat oleh para mahasiswa</p>
+      <div class="hero-cta">
+        <a href="#lookbook" class="cta-link">Discover the Collection Expo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE LOOKBOOK -->
+  <section class="canvas-section lookbook" id="lookbook">
+    <div class="lookbook-header reveal">
+      <h2 class="lookbook-title">Infomatics Engineering project Exhibition</h2>
+      <span class="lookbook-count">01 — 07</span>
+    </div>
+    <div class="lookbook-track">
+      <div class="lookbook-card">
+        <a href="#detail-1" class="lookbook-link"><img src="images/Jadi Petani.jpeg" loading="lazy"></a>
+        <div class="deskripsi">
+    <p style="font-family:Times New Roman">
+      Jadipetani adalah platform digital berbasis website yang mendukung regenerasi petani Indonesia<br>
+      dengan menghubungkan petani senior dan generasi muda. Fitur utamanya meliputi program magang, <br>
+      job connector, kurikulum berbasis AI, dan komunitas. Model bisnisnya terdiri dari paket langganan<br>
+      (50%), komisi layanan(30%), serta lisensi sekolah dan klinik (20%). Platform ini menggunakan React,<br>
+      Tailwind CSS, Express.js, Prisma ORM, Postgresql, Gemini AI, dan midtrans untuk mendukung pertanian<br>
+      yang lebih maju.
+    </p>
+  </div>
+      </div>
+      <hr>
+      <div class="lookbook-card">
+        <a href="#detail-2" class="lookbook-link"><img src="images/Teliti.jpeg" alt="Laptop menampilkan demo aplikasi JadiPetani" loading="lazy"></a>
+        <div>
+          <p style="font-family:Times New Roman">
+            Teliti adalah platform web berbasis AI untuk deteksi bias (7 kategori) dan konsistensi argumen <br>
+      dokumen akademik melalui fitur laporan lengkap, Integrity Score (0-100), dan document viewer dengan <br>
+      highlight. Model bisnisnya menyediakan akses gratis penuh untuk mahasiswa guna memberikan keunggulan <br>
+      kompetitif dibanding platform lain. Teknologi utamanya didukung oleh Gemini AI untuk menjalankan dua analisis<br>
+      paralel secara instan dan akurat.
+          </p>
+        </div>
+      </div>
+      <hr>
+      <div class="lookbook-card">
+        <a href="#detail-3" class="lookbook-link"><img src="images/Aplikasi Menejemen Bisnis Perikanan.jpeg"  loading="lazy"></a>
+        <p style="font-family:Times New Roman">
+          Kulakan adalah aplikasi manajemen bisnis perikanan yang memudahkan pengguna mengelola transaksi,stok,<br>
+          dan penjualan hasil laut dalam satu platform. Fitur utamanya meliputi dashboard interaktif, pengelolaan <br>
+          stok dan inventaris, pencatatan transaksi, peta lokasi nelayan dan pasar, serta laporan dan analisis berbasis AI.<br> 
+          Kulakukan membantu pelaku usaha perikanan memantau keuagan, mengelola persediaan, dan meningkatkan<br> efisiensi bisnis secara digital. <br>
+        </p>
+      </div>
+      <hr>
+      <div class="lookbook-card">
+        <a href="#detail-4" class="lookbook-link"><img src="images/Titip.jpeg" alt="Poster ParamaFlood Monitor — peringatan dini banjir berbasis IoT" loading="lazy"></a>
+        <span class="lookbook-card-label">No. 04 — ParamaFlood</span>
+      </div>
+      <hr>
+      <div class="lookbook-card">
+        <a href="#detail-5" class="lookbook-link"><img src="images/ivory-flow-15.jpg" alt="Laptop memutar video demo panel surya dan baterai" loading="lazy"></a>
+        <span class="lookbook-card-label">No. 05 — Demo Video</span>
+      </div>
+      </div>
+      <hr>
+    <div class="lookbook-footer reveal">
+      <span class="lookbook-hint">Scroll / Swipe &rarr;</span>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PRODUCT DETAIL -->
+  <section class="canvas-section product" id="product">
+    <div class="product-image-zone">
+      <img src="images/ivory-flow-51.jpg" alt="Meja pameran Teliti dengan laptop demo dan poster" loading="lazy">
+      <a href="#product" class="buy-circle"><span>Add to Cart</span></a>
+    </div>
+    <div class="product-info">
+      <div class="product-badge reveal">Signature Piece</div>
+      <h2 class="product-name reveal">The Maren<br>Lounge Chair</h2>
+      <div class="product-price reveal">€2,840</div>
+      <p class="product-desc reveal">Hand-upholstered in Oeko-Tex certified linen over a solid white oak frame. Each piece is numbered and made to order in our Copenhagen atelier.</p>
+      <dl class="product-specs reveal">
+        <div class="product-spec">
+          <dt>Material</dt>
+          <dd>White Oak / Belgian Linen</dd>
+        </div>
+        <div class="product-spec">
+          <dt>Dimensions</dt>
+          <dd>W 78 × D 82 × H 74 cm</dd>
+        </div>
+        <div class="product-spec">
+          <dt>Lead Time</dt>
+          <dd>6 — 8 Weeks</dd>
+        </div>
+        <div class="product-spec">
+          <dt>Origin</dt>
+          <dd>Copenhagen, Denmark</dd>
+        </div>
+      </dl>
+      <div class="product-actions reveal">
+        <a href="#" class="cta-link">Add to Cart — €2,840</a>
+        <a href="#" class="cta-link cta-link--dark">Save to Wishlist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE PROCESS -->
+  <section class="canvas-section process" id="process">
+    <div class="process-inner">
+      <div class="process-left">
+        <h2 class="process-title reveal">How each piece<br>comes to life</h2>
+        <p class="process-subtitle reveal">From raw material to your home — a journey of intention at every step.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-step">Step 01</div>
+          <h3 class="timeline-heading">Source</h3>
+          <p class="timeline-text">We begin with materials — FSC-certified hardwoods from managed Scandinavian forests, linens woven in Flanders, and leathers tanned with chestnut bark.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-step">Step 02</div>
+          <h3 class="timeline-heading">Design</h3>
+          <p class="timeline-text">Every piece starts as a 1:1 clay or foam maquette. We test proportions physically before a single line is drawn digitally.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-step">Step 03</div>
+          <h3 class="timeline-heading">Craft</h3>
+          <p class="timeline-text">Our Copenhagen atelier employs traditional joinery — no screws in the frame, no staples in the upholstery. Hand-tied eight-way springs for the seat.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-step">Step 04</div>
+          <h3 class="timeline-heading">Deliver</h3>
+          <p class="timeline-text">White-glove delivery with in-home placement. Each piece arrives in reusable linen wrapping, not cardboard. We take the packaging back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: VIDEO FRAGMENT -->
+  <section class="canvas-section video-fragment" id="video">
+    <div class="video-bg">
+      <img src="images/ivory-flow-61.jpg" alt="Laptop memutar video perakitan perangkat elektronik" loading="lazy">
+    </div>
+    <div class="grain-overlay"></div>
+    <div class="video-content reveal">
+      <div class="video-play">
+        <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+      </div>
+      <h2 class="video-title">The Quiet<br>Studio Film</h2>
+      <p class="video-caption">A slow meditation on making — 4 minutes inside our Copenhagen workshop, filmed over 12 months.</p>
+      <a href="#" class="cta-link cta-link--light">Watch the Film</a>
+    </div>
+  </section>
+
+  <!-- SECTION 6: THE SIGNATURE -->
+  <section class="canvas-section signature" id="signature">
+    <div class="signature-bg-logo" aria-hidden="true">Ivory Flow</div>
+    <div class="signature-content reveal">
+      <div class="signature-mark">The Ivory Flow</div>
+      <h2 class="signature-heading">Let's create<br>something enduring</h2>
+      <p class="signature-text">Whether it's a single chair or an entire interior — we'd love to hear what you're imagining. Consultations are always complimentary.</p>
+      <a href="mailto:hello@ivoryflow.studio" class="signature-email">hello@ivoryflow.studio</a>
+      <div class="signature-phone">+45 32 17 88 00</div>
+      <div class="signature-links">
+        <a href="#" class="cta-link">Instagram</a>
+        <a href="#" class="cta-link">Pinterest</a>
+        <a href="#" class="cta-link">Journal</a>
+      </div>
+    </div>
+    <div class="signature-footer">
+      <a href="https://www.tooplate.com" target="_blank" rel="nofollow">Free HTML Template</a> by Tooplate &middot; The Ivory Flow
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="detail-1">
+  <a href="#lookbook" class="modal-backdrop" aria-label="Tutup"></a>
+  <div class="modal-panel">
+    <img src="images/Jadi Petani.jpeg" alt="JadiPetani">
+    <div class="modal-body">
+      <h3 class="modal-title">JadiPetani</h3>
+      <p class="modal-lead">Jadipetani adalah platform digital berbasis website yang mendukung regenerasi petani Indonesia dengan menghubungkan petani senior dan generasi muda. Fitur utamanya meliputi program magang, job connector, kurikulum berbasis AI, dan komunitas. Model bisnisnya terdiri dari paket langganan (50%), komisi layanan (30%), serta lisensi sekolah dan klinik (20%). Platform ini menggunakan React, Tailwind CSS, Express.js, Prisma ORM, PostgreSQL, Gemini AI, dan Midtrans untuk mendukung pertanian yang lebih maju.</p>
+    </div>
+    <a href="#lookbook" class="modal-close" aria-label="Tutup">&#10005;</a>
+  </div>
+</div>
+
+<div class="modal" id="detail-2">
+  <a href="#lookbook" class="modal-backdrop" aria-label="Tutup"></a>
+  <div class="modal-panel">
+    <img src="images/Teliti.jpeg" alt="Teliti">
+    <div class="modal-body">
+      <h3 class="modal-title">Teliti</h3>
+      <p class="modal-lead">Teliti adalah platform web berbasis AI untuk deteksi bias (7 kategori) dan konsistensi argumen dokumen akademik melalui fitur laporan lengkap, Integrity Score (0-100), dan document viewer dengan highlight. Model bisnisnya menyediakan akses gratis penuh untuk mahasiswa guna memberikan keunggulan kompetitif dibanding platform lain. Teknologi utamanya didukung oleh Gemini AI untuk menjalankan dua analisis paralel secara instan dan akurat.</p>
+    </div>
+    <a href="#lookbook" class="modal-close" aria-label="Tutup">&#10005;</a>
+  </div>
+</div>
+
+<div class="modal" id="detail-3">
+  <a href="#lookbook" class="modal-backdrop" aria-label="Tutup"></a>
+  <div class="modal-panel">
+    <img src="images/Aplikasi Menejemen Bisnis Perikanan.jpeg" alt="Kulakan">
+    <div class="modal-body">
+      <h3 class="modal-title">Aplikasi Menejemen Bisnis Perikanan</h3>
+      <p class="modal-lead">Kulakan adalah aplikasi manajemen bisnis perikanan yang memudahkan pengguna mengelola transaksi, stok, dan penjualan hasil laut dalam satu platform. Fitur utamanya meliputi dashboard interaktif, pengelolaan stok dan inventaris, pencatatan transaksi, peta lokasi nelayan dan pasar, serta laporan dan analisis berbasis AI. Kulakan membantu pelaku usaha perikanan memantau keuangan, mengelola persediaan, dan meningkatkan efisiensi bisnis secara digital.</p>
+    </div>
+    <a href="#lookbook" class="modal-close" aria-label="Tutup">&#10005;</a>
+  </div>
+</div>
+
+<div class="modal" id="detail-4">
+  <a href="#lookbook" class="modal-backdrop" aria-label="Tutup"></a>
+  <div class="modal-panel">
+    <img src="images/Titip.jpeg" alt="Titip">
+    <div class="modal-body">
+      <h3 class="modal-title">Titip</h3>
+      <p class="modal-lead">[Isi penjelasan proyek Titip di sini]</p>
+    </div>
+    <a href="#lookbook" class="modal-close" aria-label="Tutup">&#10005;</a>
+  </div>
+</div>
+
+<div class="modal" id="detail-5">
+  <a href="#lookbook" class="modal-backdrop" aria-label="Tutup"></a>
+  <div class="modal-panel">
+    <img src="images/ivory-flow-15.jpg" alt="Demo Video">
+    <div class="modal-body">
+      <h3 class="modal-title">Demo Video</h3>
+      <p class="modal-lead">[Isi penjelasan di sini]</p>
+    </div>
+    <a href="#lookbook" class="modal-close" aria-label="Tutup">&#10005;</a>
+  </div>
+</div>
+
 </body>
 </html>
