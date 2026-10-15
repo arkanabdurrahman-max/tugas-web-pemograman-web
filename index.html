@@ -8,6 +8,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tooplate-ivory-style.css">
 
+<style>
+.lookbook-link { display: block; cursor: zoom-in; }
+
+.lookbook-card { flex: 0 0 280px; width: 280px; }
+.lookbook-card img { width: 100%; height: auto; min-height: 0; aspect-ratio: 3 / 4; object-fit: cover; }
+
+.lookbook-card .deskripsi,
+.lookbook-card p { display: none; }
+
+.modal { display: none; position: fixed; inset: 0; z-index: 3000; align-items: center; justify-content: center; padding: 24px; }
+.modal:target { display: flex; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(26, 23, 20, 0.72); backdrop-filter: blur(6px); cursor: zoom-out; }
+.modal-panel { position: relative; z-index: 1; display: grid; grid-template-columns: 0.9fr 1.1fr; width: min(980px, 100%); height: min(88vh, 720px); background: var(--oat); border-radius: 28px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35); }
+.modal-panel > img { width: 100%; height: 100%; object-fit: contain; background: var(--oat-mid); }
+.modal-body { padding: 56px 44px 40px; overflow-y: auto; }
+.modal-title { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; margin-bottom: 16px; }
+.modal-lead { font-size: 14px; font-weight: 300; line-height: 1.85; color: var(--ink-soft); }
+.modal-close { position: absolute; top: 16px; right: 16px; z-index: 2; width: 40px; height: 40px; border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; }
+
+@media (max-width: 768px) {
+  .lookbook-card { flex: 0 0 220px; width: 220px; }
+  .lookbook-card img { height: auto; min-height: 0; }
+  .modal-panel { grid-template-columns: 1fr; grid-template-rows: 34vh auto; height: auto; max-height: 92vh; overflow-y: auto; }
+  .modal-body { padding: 28px 24px 32px; overflow: visible; }
+}
+</style>
+
 </head>
 <body>
 
@@ -16,7 +43,7 @@
 <!-- FLOATING PILL NAV (desktop) -->
 <nav class="pill-nav" aria-label="Main Navigation">
   <a href="#hero">Home</a>
-  <a href="#lookbook">Lookbook</a>
+  <a href="#lookbook">Exhibition</a>
   <a href="#product">Shop</a>
   <a href="#process">Process</a>
   <a href="#video">Story</a>
@@ -41,7 +68,7 @@
   <section class="canvas-section hero" id="hero">
     <div class="hero-image">
       <img src="paramadina.jpeg" loading="eager">
-      <div class="hero-image-tag">Spring / Summer 2026</div>
+      <div class="hero-image-tag">13 Oktober 2026</div>
     </div>
     <div class="hero-content">
       <div class="hero-eyebrow">Pameran Rancangan Aplikasi Website &amp; Iot</div>
@@ -56,8 +83,8 @@
   <!-- SECTION 2: THE LOOKBOOK -->
   <section class="canvas-section lookbook" id="lookbook">
     <div class="lookbook-header reveal">
-      <h2 class="lookbook-title">Infomatics Engineering project Exhibition</h2>
-      <span class="lookbook-count">01 — 07</span>
+      <h2 class="lookbook-title">Informatics Engineering project Exhibition</h2>
+      <span class="lookbook-count">01 — 05</span>
     </div>
     <div class="lookbook-track">
       <div class="lookbook-card">
@@ -99,18 +126,20 @@
       <hr>
       <div class="lookbook-card">
         <a href="#detail-4" class="lookbook-link"><img src="images/Titip.jpeg" alt="Poster ParamaFlood Monitor — peringatan dini banjir berbasis IoT" loading="lazy"></a>
-        <span class="lookbook-card-label">No. 04 — ParamaFlood</span>
+        <p style="font-family:Times New Roman;">
+          Titip adalah sistem cold staroge pintar berbasis AI dan IOT yang membantu menjaga kesegaran produk<br>
+          pangan di pasar tradisional. Sistem ini dilengkapi sensor suhu kelembapan, dan gas untuk memantau<br>
+          kondisi penyimpanan secara real-time, serta AI untuk memprediksi masa layak jual produk. Fitur utamanya <br>
+          meliputi pemantauan melalui dashbord PWA, penyewaan loker pendingin, akses otomatis menggukana QR code,<br>
+          dan pembayaran digital terintegrasi QRIS.
+        </p>
       </div>
       <hr>
       <div class="lookbook-card">
         <a href="#detail-5" class="lookbook-link"><img src="images/ivory-flow-15.jpg" alt="Laptop memutar video demo panel surya dan baterai" loading="lazy"></a>
-        <span class="lookbook-card-label">No. 05 — Demo Video</span>
       </div>
       </div>
       <hr>
-    <div class="lookbook-footer reveal">
-      <span class="lookbook-hint">Scroll / Swipe &rarr;</span>
-    </div>
   </section>
 
   <!-- SECTION 3: PRODUCT DETAIL -->
@@ -260,7 +289,11 @@
     <img src="images/Titip.jpeg" alt="Titip">
     <div class="modal-body">
       <h3 class="modal-title">Titip</h3>
-      <p class="modal-lead">[Isi penjelasan proyek Titip di sini]</p>
+      <p class="modal-lead">Titip adalah sistem cold staroge pintar berbasis AI dan IOT yang membantu menjaga kesegaran produk<br>
+          pangan di pasar tradisional. Sistem ini dilengkapi sensor suhu kelembapan, dan gas untuk memantau<br>
+          kondisi penyimpanan secara real-time, serta AI untuk memprediksi masa layak jual produk. Fitur utamanya <br>
+          meliputi pemantauan melalui dashbord PWA, penyewaan loker pendingin, akses otomatis menggukana QR code,<br>
+          dan pembayaran digital terintegrasi QRIS.</p>
     </div>
     <a href="#lookbook" class="modal-close" aria-label="Tutup">&#10005;</a>
   </div>
