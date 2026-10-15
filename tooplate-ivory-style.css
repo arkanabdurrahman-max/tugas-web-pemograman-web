@@ -1,8 +1,5 @@
 @charset "utf-8";
-/* Tooplate 2166 Ivory Flow — https://www.tooplate.com/view/2166-ivory-flow
-   Versi CSS-only (tanpa JavaScript) */
 
-/* ═══ RESET & VARIABLES ═══ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -31,7 +28,7 @@ body {
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; height: auto; }
 
-/* ═══ FLOATING PILL NAV ═══ */
+
 .pill-nav {
   position: fixed;
   top: 20px;
@@ -63,8 +60,6 @@ img { display: block; max-width: 100%; height: auto; }
 
 .pill-nav a:hover { color: var(--ink); }
 
-/* Menu aktif (CSS-only): Home aktif secara default,
-   lalu berpindah mengikuti link yang diklik (:target) */
 .pill-nav a[href="#hero"] { background: var(--ink); color: var(--oat); }
 body:has(main :target) .pill-nav a[href="#hero"] { background: transparent; color: var(--ink-soft); }
 body:has(#hero:target) .pill-nav a[href="#hero"],
@@ -77,7 +72,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
   color: var(--oat);
 }
 
-/* ═══ EST. 2026 DECORATOR ═══ */
+
 .est-label {
   position: fixed;
   right: 24px;
@@ -93,7 +88,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
   white-space: nowrap;
 }
 
-/* ═══ EXPANDING UNDERLINE CTA ═══ */
+
 .cta-link {
   display: inline-block;
   font-size: 12px;
@@ -124,7 +119,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 .cta-link--light { color: var(--oat); }
 .cta-link--light::after { background: var(--oat); }
 
-/* ═══ STICKY SECTION ARCHITECTURE ═══ */
+
 .canvas-section {
   position: sticky;
   top: 0;
@@ -139,7 +134,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 .canvas-section:nth-child(5) { z-index: 5; }
 .canvas-section:nth-child(6) { z-index: 6; }
 
-/* ═══ SECTION 1: HERO ═══ */
+
 .hero {
   background: var(--oat);
   display: grid;
@@ -300,7 +295,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
   color: var(--ink-faint);
 }
 
-/* ═══ SECTION 3: PRODUCT ═══ */
+
 .product {
   background: var(--oat);
   display: grid;
@@ -311,7 +306,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 .product-image-zone { position: relative; height: 100%; overflow: hidden; }
 .product-image-zone img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Lingkaran "Add to Cart" muncul saat hover (CSS-only, posisi tetap di tengah) */
+
 .buy-circle {
   position: absolute;
   top: 50%;
@@ -395,7 +390,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 .product-spec dd { font-size: 14px; font-weight: 500; }
 .product-actions { display: flex; gap: 28px; align-items: center; }
 
-/* ═══ SECTION 4: PROCESS ═══ */
+
 .process {
   background: var(--ink);
   color: var(--oat);
@@ -454,65 +449,12 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
   font-size: 9px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--terra);
+  color: var(--out);
   margin-bottom: 10px;
 }
 
 .timeline-heading { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 8px; color: var(--oat); }
-.timeline-text { font-size: 13px; font-weight: 300; line-height: 1.75; color: var(--ink-faint); max-width: 340px; }
-
-/* ═══ SECTION 5: VIDEO FRAGMENT ═══ */
-.video-fragment {
-  background: var(--ink);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-bg { position: absolute; inset: 0; }
-.video-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45) saturate(0.8); }
-
-.grain-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0.4;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 180px;
-  mix-blend-mode: overlay;
-}
-
-.video-content { position: relative; z-index: 3; text-align: center; max-width: 600px; padding: 40px; }
-
-.video-play {
-  width: 80px;
-  height: 80px;
-  border: 1px solid rgba(252, 250, 248, 0.3);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 32px;
-  cursor: pointer;
-  transition: border-color 0.6s var(--ease-soft), transform 0.6s var(--ease-soft);
-}
-
-.video-play:hover { border-color: var(--oat); transform: scale(1.1); }
-.video-play svg { width: 20px; height: 20px; fill: var(--oat); margin-left: 3px; }
-
-.video-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 4vw, 52px);
-  font-weight: 300;
-  color: var(--oat);
-  line-height: 1.15;
-  margin-bottom: 16px;
-}
-
-.video-caption { font-size: 13px; font-weight: 300; color: var(--ink-faint); line-height: 1.7; margin-bottom: 28px; }
+.timeline-text { font-size: 13px; font-weight: 300; line-height: 1.75; color: var(--white); max-width: 340px; }
 
 /* ═══ SECTION 6: SIGNATURE ═══ */
 .signature {
@@ -551,7 +493,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 
 .signature-heading {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(32px, 4vw, 56px);
+  font-size: clamp(24px, 3.2vw, 42px);
   font-weight: 300;
   line-height: 1.15;
   margin-bottom: 20px;
@@ -570,7 +512,7 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 
 .signature-email:hover { color: var(--terra); }
 
-.signature-phone { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--ink-faint); margin-bottom: 36px; }
+.signature-phone { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--ink); margin-bottom: 36px; }
 .signature-links { display: flex; gap: 28px; justify-content: center; }
 
 .signature-footer {
@@ -747,4 +689,38 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
   .lookbook-card img { height: auto; min-height: 0; }
   .modal-panel { grid-template-columns: 1fr; grid-template-rows: 34vh auto; height: auto; max-height: 92vh; overflow-y: auto; }
   .modal-body { padding: 28px 24px 32px; overflow: visible; }
+}
+
+.lookbook-track { align-items: flex-start; }
+
+.lookbook-track .lookbook-card { flex: 0 0 280px; width: 280px; }
+.lookbook-track .lookbook-card img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.lookbook-card summary { list-style: none; cursor: pointer; display: block; }
+.lookbook-card summary::-webkit-details-marker { display: none; }
+
+.lookbook-card .lookbook-card-label {
+  position: static;
+  display: block;
+  margin: 14px 0 0 10px;
+}
+
+.lookbook-card .deskripsi { display: none; }
+.lookbook-card details[open] .deskripsi {
+  display: block;
+  padding: 14px 10px 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 768px) {
+  .lookbook-track .lookbook-card { flex: 0 0 220px; width: 220px; }
 }
