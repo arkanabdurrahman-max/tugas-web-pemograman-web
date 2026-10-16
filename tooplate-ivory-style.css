@@ -51,7 +51,7 @@ img { display: block; max-width: 100%; height: auto; }
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--ink);
   padding: 8px 18px;
   border-radius: 999px;
   transition: color 0.5s var(--ease-soft), background 0.5s var(--ease-soft);
@@ -62,6 +62,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .pill-nav a[href="#hero"] { background: var(--ink); color: var(--oat); }
 body:has(main :target) .pill-nav a[href="#hero"] { background: transparent; color: var(--ink-soft); }
+body:has(#registrasi:target) .pill-nav a[href="#registrasi"],
 body:has(#hero:target) .pill-nav a[href="#hero"],
 body:has(#lookbook:target) .pill-nav a[href="#lookbook"],
 body:has(#product:target) .pill-nav a[href="#product"],
@@ -305,49 +306,13 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 .product-image-zone { position: relative; height: 100%; overflow: hidden; }
 .product-image-zone img { width: 100%; height: 100%; object-fit: cover; }
 
-
-.buy-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: var(--terra);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.4);
-  pointer-events: none;
-  transition: opacity 0.5s var(--ease-soft), transform 0.5s var(--ease-soft);
-}
-
 .product-image-zone:hover .buy-circle {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   pointer-events: auto;
 }
 
-.buy-circle span {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-
 .product-info { padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; }
-
-.product-badge {
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--terra);
-  margin-bottom: 20px;
-}
 
 .product-name {
   font-family: 'Cormorant Garamond', serif;
@@ -418,7 +383,6 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 .process-subtitle { font-size: 14px; font-weight: 300; color: var(--ink-faint); line-height: 1.8; max-width: 340px; }
 
 .timeline { position: relative; padding-left: 40px; }
-
 .timeline::before {
   content: '';
   position: absolute;
@@ -716,3 +680,4 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 @media (max-width: 768px) {
   .lookbook-track .lookbook-card { flex: 0 0 220px; width: 220px; }
 }
+

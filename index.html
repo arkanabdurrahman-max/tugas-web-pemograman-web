@@ -33,6 +33,124 @@
   .modal-panel { grid-template-columns: 1fr; grid-template-rows: 34vh auto; height: auto; max-height: 92vh; overflow-y: auto; }
   .modal-body { padding: 28px 24px 32px; overflow: visible; }
 }
+
+.register {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 24px 70px;
+  background: var(--oat-mid, #ebe3d5);
+}
+
+.register-form {
+  width: min(560px, 100%);
+  background: var(--white, #fffdf9);
+  padding: 56px 48px 44px;
+  border-radius: 28px;
+  box-shadow: 0 30px 80px rgba(26, 23, 20, 0.12);
+}
+
+.register-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft, #6b635a);
+  margin-bottom: 12px;
+}
+
+.register-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5vw, 46px);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 36px;
+  color: var(--ink, #1a1714);
+}
+
+.reg-group { margin-bottom: 26px; }
+
+.reg-label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink, #1a1714);
+  margin-bottom: 8px;
+}
+
+.reg-row { display: flex; gap: 16px; }
+.reg-col { flex: 1; min-width: 0; }
+
+.register-form input {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--ink, #1a1714);
+  background: var(--oat, #f5efe4);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color .25s, background .25s, box-shadow .25s;
+}
+.register-form input:hover { background: var(--oat-mid, #ebe3d5); }
+.register-form input:focus {
+  background: var(--white, #fffdf9);
+  border-color: var(--ink, #1a1714);
+  box-shadow: 0 0 0 4px rgba(26, 23, 20, 0.06);
+}
+.register-form input:user-invalid { border-color: #b3261e; }
+
+.register-form small {
+  display: block;
+  margin-top: 6px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--ink-soft, #6b635a);
+}
+
+.reg-kirim {
+  display: block;
+  width: 100%;
+  margin-top: 34px;
+  padding: 16px;
+  text-align: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white, #fffdf9);
+  background: var(--ink, #1a1714);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .25s, box-shadow .25s;
+}
+.reg-kirim:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(26, 23, 20, 0.25);
+}
+
+.reg-info {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--ink-soft, #6b635a);
+}
+
+@media (max-width: 768px) {
+  .register-form { padding: 36px 24px 32px; border-radius: 22px; }
+  .reg-row { flex-direction: column; gap: 0; }
+  .reg-row .reg-col + .reg-col { margin-top: 16px; }
+}
+
 </style>
 </head>
 <body>
@@ -40,9 +158,10 @@
 <div class="est-label" aria-hidden="true">Est. 2026</div>
 
 <nav class="pill-nav" aria-label="Main Navigation">
+  <a href="#registrasi">registrasi</a>
   <a href="#hero">Home</a>
   <a href="#lookbook">Proyek EXPO</a>
-  <a href="#product">Shop</a>
+  <a href="#product">Bazaar</a>
   <a href="#process">Keluh Kesah</a>
   <a href="#signature">Kontak</a>
 </nav>
@@ -50,14 +169,55 @@
 <a href="#menu" class="hamburger" aria-label="Open Navigation"><span></span><span></span><span></span></a>
 <nav class="mobile-nav" id="menu" aria-label="Mobile Navigation">
   <a href="#hero" class="hamburger open menu-close" aria-label="Close Navigation"><span></span><span></span><span></span></a>
+  <a href="#registrasi">registrasi</a>
   <a href="#hero">Home</a>
   <a href="#lookbook">Proyek EXPO</a>
-  <a href="#product">Shop</a>
+  <a href="#product">Bazaar</a>
   <a href="#process">Keluh Kesah</a>
   <a href="#signature">Kontak</a>
 </nav>
 
 <main>
+
+<section class="canvas-section register" id="registrasi">
+    <form class="register-form" autocomplete="off" onsubmit="event.preventDefault(); alert('Registrasi berhasil! Sampai jumpa di IT Fest EXPO.'); this.reset();">
+      <div class="register-eyebrow">13 Oktober 2026</div>
+      <h2 class="register-title">Registrasi IT Fest EXPO</h2>
+
+      <div class="reg-group">
+        <label class="reg-label" for="depan">Nama</label>
+        <div class="reg-row">
+          <div class="reg-col">
+            <input type="text" id="depan" name="depan" placeholder="Isi" required>
+            <small>Nama Depan</small>
+          </div>
+          <div class="reg-col">
+            <input type="text" id="belakang" name="belakang" placeholder="Isi">
+            <small>Nama Belakang</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="reg-group">
+        <label class="reg-label" for="nim">NIM</label>
+        <input type="text" id="nim" name="nim" inputmode="numeric" pattern="[0-9]+" title="NIM hanya berisi angka" placeholder="Isi" required>
+        <small>Hanya angka</small>
+      </div>
+
+      <div class="reg-group">
+        <label class="reg-label" for="prodi">Prodi</label>
+        <input type="text" id="prodi" name="prodi" placeholder="Isi" required>
+      </div>
+
+      <div class="reg-group">
+        <label class="reg-label" for="kampus">Kampus</label>
+        <input type="text" id="kampus" name="kampus" placeholder="Isi" required>
+      </div>
+
+      <button type="submit" class="reg-kirim">Kirim</button>
+      <p class="reg-info">Lengkapi semua kolom terlebih dahulu</p>
+    </form>
+  </section>
 
   <section class="canvas-section hero" id="hero">
     <div class="hero-image">
@@ -148,42 +308,29 @@
     </div>
   </section>
 
-  <section class="canvas-section product" id="product">
-    <div class="product-image-zone">
-      <img src="images/ivory-flow-51.jpg" alt="Meja pameran Teliti dengan laptop demo dan poster" loading="lazy">
-      <a href="#product" class="buy-circle"><span>Add to Cart</span></a>
+  <section class="canvas-section lookbook" id="product">
+    <div class="lookbook-header reveal">
+      <h2 class="lookbook-title">Bazaar IT Fest EXPO</h2>
+      <span class="lookbook-count" style="font-family:Times New Roman; color: #000000; font-size: 16px;">01 — 03</span>
     </div>
-    <div class="product-info">
-      <div class="product-badge reveal">Signature Piece</div>
-      <h2 class="product-name reveal">The Maren<br>Lounge Chair</h2>
-      <div class="product-price reveal">€2,840</div>
-      <p class="product-desc reveal">Hand-upholstered in Oeko-Tex certified linen over a solid white oak frame. Each piece is numbered and made to order in our Copenhagen atelier.</p>
-      <dl class="product-specs reveal">
-        <div class="product-spec">
-          <dt>Material</dt>
-          <dd>White Oak / Belgian Linen</dd>
-        </div>
-        <div class="product-spec">
-          <dt>Dimensions</dt>
-          <dd>W 78 × D 82 × H 74 cm</dd>
-        </div>
-        <div class="product-spec">
-          <dt>Lead Time</dt>
-          <dd>6 — 8 Weeks</dd>
-        </div>
-        <div class="product-spec">
-          <dt>Origin</dt>
-          <dd>Copenhagen, Denmark</dd>
-        </div>
-      </dl>
-      <div class="product-actions reveal">
-        <a href="#" class="cta-link">Add to Cart — €2,840</a>
-        <a href="#" class="cta-link cta-link--dark">Save to Wishlist</a>
+    <div class="lookbook-track">
+      <div class="lookbook-card">
+        <a href="#detail-6" class="lookbook-link"><img src="images/Chicken Crispy Roll.jpeg" alt="Chicken Crispy Roll" loading="lazy"></a>
+        <span class="lookbook-card-label" style="font-family:Times New Roman; color: #000000; font-size: 16px;">01 Chicken Crispy Roll</span>
+      </div>
+      <hr>
+      <div class="lookbook-card">
+        <a href="#detail-7" class="lookbook-link"><img src="images/Asinan Kiamboy.jpeg" alt="Asinan Kiamboy" loading="lazy"></a>
+        <span class="lookbook-card-label" style="font-family:Times New Roman; color: #000000; font-size: 16px;">02 Asinan Kiamboy</span>
+      </div>
+      <hr>
+      <div class="lookbook-card">
+        <a href="#detail-8" class="lookbook-link"><img src="images/Buumbake.jpeg" alt="Dessert &amp; Bakery" loading="lazy"></a>
+        <span class="lookbook-card-label" style="font-family:Times New Roman; color: #000000; font-size: 16px;">03 Dessert &amp; Bakery</span>
       </div>
     </div>
-  </section>
 
-  <section class="canvas-section process" id="process">
+    <section class="canvas-section process" id="process">
     <div class="process-inner">
       <div class="process-left">
         <h2 class="process-title reveal">Realita Di balik<br>Pembuatan Studi Kasus Website EXPO</h2>
@@ -214,7 +361,7 @@
     <div class="signature-content reveal">
       <div class="signature-mark">IT Fest EXPO</div>
       <h2 class="signature-heading">Pameran Rancangan Aplikasi Website &amp; Iot</h2>
-      <p class="signature-text">Menghadirkan integrasi sistem website dan Iot yang dibuat oleh Mahasiswa Paramadina, A.</p>
+      <p class="signature-text">Mengenal dan menghadirkan inovasi terbaru dalam dunia website dan Iot yang dikembangkan oleh para mahasiswa.</p>
       <a href="mailto:hello@ivoryflow.studio" class="signature-email">barudak@gmail.well</a>
       <div class="signature-phone">+882-3211-1788</div>
       <div class="signature-links">
@@ -271,7 +418,7 @@
     <img src="images/Titip.jpeg" alt="Titip">
     <div class="modal-body">
       <h3 class="modal-title">Titip</h3>
-      <p class="modal-lead">Titip adalah sistem cold staroge pintar berbasis AI dan IOT yang membantu menjaga kesegaran produk<br>
+      <p class="modal-lead">Titip adalah sistem cold storage pintar berbasis AI dan IOT yang membantu menjaga kesegaran produk<br>
           pangan di pasar tradisional. Sistem ini dilengkapi sensor suhu kelembapan, dan gas untuk memantau<br>
           kondisi penyimpanan secara real-time, serta AI untuk memprediksi masa layak jual produk. Fitur utamanya <br>
           meliputi pemantauan melalui dashbord PWA, penyewaan loker pendingin, akses otomatis menggukana QR code,<br>
@@ -293,6 +440,42 @@
         banjir dengan teknologi LSTM, dan memberikan notifikasi dan rekomendasi keselamatan melalui aplikasi mobile flutter.</p>
     </div>
     <a href="#lookbook" class="modal-close" aria-label="Tutup">&#10005;</a>
+  </div>
+</div>
+
+<div class="modal" id="detail-6">
+  <a href="#product" class="modal-backdrop" aria-label="Tutup"></a>
+  <div class="modal-panel">
+    <img src="images/Chicken Crispy Roll.jpeg" alt="Chicken Crispy Roll">
+    <div class="modal-body">
+      <h3 class="modal-title">Chicken Crispy Roll</h3>
+      <p class="modal-lead">Khoki Chikura menyajikan Chicken Crispy Roll dengan tekstur yang renyah di luar dan lumer di dalam mulut. Tersedia berbagai macam pilihan saus celup dan bumbu tabur yang bikin nagih, tetapi tempat bazaar tidak terlalu strategis tidak menyediakan menu harga.</p>
+    </div>
+    <a href="#product" class="modal-close" aria-label="Tutup">&#10005;</a>
+  </div>
+</div>
+
+<div class="modal" id="detail-7">
+  <a href="#product" class="modal-backdrop" aria-label="Tutup"></a>
+  <div class="modal-panel">
+    <img src="images/Asinan Kiamboy.jpeg" alt="Asinan Kiamboy">
+    <div class="modal-body">
+      <h3 class="modal-title">Asinan Kiamboy</h3>
+      <p class="modal-lead">Perpaduan buah segar premium dengan kuah kiamboy tradisional khas Asia yang menghasilkan cita rasa manis, asam, asin, gurih, pedas, dan segar sekaligus, namun sangat disayangkan tempat bazaar tidak menyediakan menu harga.</p>
+    </div>
+    <a href="#product" class="modal-close" aria-label="Tutup">&#10005;</a>
+  </div>
+</div>
+
+<div class="modal" id="detail-8">
+  <a href="#product" class="modal-backdrop" aria-label="Tutup"></a>
+  <div class="modal-panel">
+    <img src="images/Buumbake.jpeg" alt="Dessert &amp; Bakery">
+    <div class="modal-body">
+      <h3 class="modal-title">Buumbake</h3>
+      <p class="modal-lead">Menyajikan aneka hidangan penutup (dessert) manis, kue kering premium, serta camilan kue box yang cocok untuk menemani waktu santai Anda selama acara IT Fest, namun sangat disayangkan tempat bazaar tidak menyediakan menu harga.</p>
+    </div>
+    <a href="#product" class="modal-close" aria-label="Tutup">&#10005;</a>
   </div>
 </div>
 
