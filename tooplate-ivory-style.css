@@ -207,7 +207,6 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ═══ SECTION 2: LOOKBOOK (scroll-snap horizontal, tanpa JS) ═══ */
 .lookbook {
   background: var(--oat-mid);
   display: flex;
@@ -456,7 +455,6 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 .timeline-heading { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 8px; color: var(--oat); }
 .timeline-text { font-size: 13px; font-weight: 300; line-height: 1.75; color: var(--white); max-width: 340px; }
 
-/* ═══ SECTION 6: SIGNATURE ═══ */
 .signature {
   background: var(--oat-mid);
   display: flex;
