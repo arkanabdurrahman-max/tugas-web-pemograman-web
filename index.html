@@ -151,6 +151,23 @@
   .reg-row .reg-col + .reg-col { margin-top: 16px; }
 }
 
+  .pill-nav a[href="#hero"] { background: transparent; color: var(--ink); }
+.pill-nav a[href="#registrasi"] { background: var(--ink); color: var(--oat); }
+
+body:has(main :target) .pill-nav a[href="#registrasi"] {
+  background: transparent;
+  color: var(--ink);
+}
+
+body:has(#registrasi:target) .pill-nav a[href="#registrasi"],
+body:has(#hero:target) .pill-nav a[href="#hero"],
+body:has(#lookbook:target) .pill-nav a[href="#lookbook"],
+body:has(#product:target) .pill-nav a[href="#product"],
+body:has(#process:target) .pill-nav a[href="#process"],
+body:has(#signature:target) .pill-nav a[href="#signature"] {
+  background: var(--ink);
+  color: var(--oat);
+}
 </style>
 </head>
 <body>
