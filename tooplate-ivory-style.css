@@ -530,9 +530,6 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 .signature-footer a { transition: color 0.4s; }
 .signature-footer a:hover { color: var(--terra); }
 
-/* ═══ SCROLL REVEAL (CSS scroll-driven animation) ═══
-   Default: konten langsung terlihat. Browser modern (Chrome/Edge/Safari 26+)
-   akan memberi efek fade-in saat di-scroll. */
 @keyframes revealIn {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
@@ -556,7 +553,6 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
   }
 }
 
-/* ═══ HAMBURGER & MOBILE NAV (CSS-only via :target) ═══ */
 .hamburger {
   display: none;
   position: fixed;
@@ -606,13 +602,11 @@ body:has(#signature:target) .pill-nav a[href="#signature"] {
 
 .mobile-nav a:not(.hamburger):hover { color: var(--terra); }
 
-/* ═══ REDUCED MOTION ═══ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   .reveal, .timeline-item { animation: none !important; opacity: 1; transform: none; }
 }
 
-/* ═══ RESPONSIVE ═══ */
 @media (max-width: 1024px) {
   .hero { grid-template-columns: 1fr; }
   .hero-image { height: 50vh; }
